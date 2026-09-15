@@ -27,7 +27,7 @@ body {
     min-height: 100vh;
 }
 
-/* ═══ CONTENEUR CENTRÉ POUR LE CONTENU ═══ */
+/* ═══ CONTENEUR CENTRÉ ═══ */
 .app-wrapper {
     width: 100%;
     display: flex;
@@ -43,20 +43,21 @@ body {
     flex-direction: column;
 }
 
-/* ═══ HEADER ═══ */
+/* ═══ HEADER AGRANDI ═══ */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px;
+    padding: 40px 24px;
     background: #ffffff;
     border-bottom: 1px solid #e8eaed;
+    min-height: 140px;
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 18px;
 }
 
 .burger {
@@ -65,43 +66,47 @@ header {
     align-items: center;
     cursor: pointer;
 }
+
 .burger-lines {
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    margin-bottom: 1px;
+    gap: 5px;
+    margin-bottom: 4px;
 }
+
 .burger-lines span {
     display: block;
-    width: 24px;
-    height: 2px;
+    width: 34px;
+    height: 3px;
     background: #1d1d1f;
     border-radius: 1px;
 }
+
 .menu-text {
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 700;
     color: #1d1d1f;
 }
 
 .logo-img {
-    width: 38px;
-    height: 38px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
 }
 
 .search-icon {
-    width: 40px;
-    height: 40px;
-    border: 1.5px solid #1d1d1f;
+    width: 58px;
+    height: 58px;
+    border: 2.5px solid #1d1d1f;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
+
 .search-icon i {
-    font-size: 15px;
+    font-size: 24px;
     color: #1d1d1f;
 }
 
@@ -337,16 +342,13 @@ label.field-label {
     100% { opacity: 1; stroke-dashoffset: 0; }
 }
 
-/* ═══ FOOTER — PLEINE LARGEUR ═══ */
+/* ═══ FOOTER BLEU PLEINE LARGEUR ═══ */
 .footer-full {
     width: 100%;
     background: #003192;
     color: #ffffff;
-    margin-top: 0;
-    padding: 0;
 }
 
-/* Contenu interne centré à 390px */
 .footer-full .footer-inner {
     max-width: 390px;
     margin: 0 auto;
@@ -428,7 +430,7 @@ label.field-label {
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-/* ═══ BANDEAU BLANC — PLEINE LARGEUR ═══ */
+/* ═══ BANDEAU BLANC PLEINE LARGEUR ═══ */
 .footer-white-full {
     width: 100%;
     background: #ffffff;
@@ -463,7 +465,7 @@ label.field-label {
 <!-- CONTENU CENTRÉ -->
 <div class="app-wrapper">
     <div class="app-container">
-        <!-- HEADER -->
+        <!-- HEADER AGRANDI -->
         <header>
             <div class="header-left">
                 <div class="burger">
@@ -537,7 +539,7 @@ label.field-label {
     </div>
 </div>
 
-<!-- FOOTER BLEU — PLEINE LARGEUR -->
+<!-- FOOTER BLEU PLEINE LARGEUR -->
 <footer class="footer-full">
     <div class="footer-inner">
         <div class="footer-top">
@@ -577,7 +579,7 @@ label.field-label {
     </div>
 </footer>
 
-<!-- BANDEAU BLANC — PLEINE LARGEUR -->
+<!-- BANDEAU BLANC PLEINE LARGEUR -->
 <div class="footer-white-full">
     <div class="footer-white-inner">
         <div class="footer-brand">
