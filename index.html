@@ -21,13 +21,81 @@ html, body {
 }
 
 body {
-    background: #f0f2f5;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* ═══ CONTENEUR CENTRÉ ═══ */
+/* ═══ HEADER — PLEINE LARGEUR ═══ */
+header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.header-inner {
+    max-width: 390px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.burger-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 1px;
+}
+.burger-lines span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #1d1d1f;
+    border-radius: 1px;
+}
+.menu-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.logo-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.search-icon {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #1d1d1f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.search-icon i {
+    font-size: 15px;
+    color: #1d1d1f;
+}
+
+/* ═══ CONTENEUR CENTRÉ POUR LE CONTENU ═══ */
 .app-wrapper {
     width: 100%;
     display: flex;
@@ -41,73 +109,6 @@ body {
     background: #f0f2f5;
     display: flex;
     flex-direction: column;
-}
-
-/* ═══ HEADER AGRANDI ═══ */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 24px;
-    background: #ffffff;
-    border-bottom: 1px solid #e8eaed;
-    min-height: 140px;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.burger {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-
-.burger-lines {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 4px;
-}
-
-.burger-lines span {
-    display: block;
-    width: 34px;
-    height: 3px;
-    background: #1d1d1f;
-    border-radius: 1px;
-}
-
-.menu-text {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1d1d1f;
-}
-
-.logo-img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-}
-
-.search-icon {
-    width: 58px;
-    height: 58px;
-    border: 2.5px solid #1d1d1f;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.search-icon i {
-    font-size: 24px;
-    color: #1d1d1f;
 }
 
 /* ═══ ZONE GRISE TITRE ═══ */
@@ -342,11 +343,13 @@ label.field-label {
     100% { opacity: 1; stroke-dashoffset: 0; }
 }
 
-/* ═══ FOOTER BLEU PLEINE LARGEUR ═══ */
+/* ═══ FOOTER — PLEINE LARGEUR ═══ */
 .footer-full {
     width: 100%;
     background: #003192;
     color: #ffffff;
+    margin-top: 0;
+    padding: 0;
 }
 
 .footer-full .footer-inner {
@@ -430,7 +433,7 @@ label.field-label {
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-/* ═══ BANDEAU BLANC PLEINE LARGEUR ═══ */
+/* ═══ BANDEAU BLANC — PLEINE LARGEUR ═══ */
 .footer-white-full {
     width: 100%;
     background: #ffffff;
@@ -462,27 +465,29 @@ label.field-label {
 </head>
 <body>
 
+<!-- HEADER — PLEINE LARGEUR -->
+<header>
+    <div class="header-inner">
+        <div class="header-left">
+            <div class="burger">
+                <div class="burger-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-text">Menu</div>
+            </div>
+            <img src="logo.png" alt="Crédit Mutuel" class="logo-img">
+        </div>
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+</header>
+
 <!-- CONTENU CENTRÉ -->
 <div class="app-wrapper">
     <div class="app-container">
-        <!-- HEADER AGRANDI -->
-        <header>
-            <div class="header-left">
-                <div class="burger">
-                    <div class="burger-lines">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="menu-text">Menu</div>
-                </div>
-                <img src="logo.png" alt="Crédit Mutuel" class="logo-img">
-            </div>
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </header>
-
         <!-- ZONE GRISE TITRE -->
         <div class="gray-zone">
             <h1 id="main-title">Opposition</h1>
@@ -539,7 +544,7 @@ label.field-label {
     </div>
 </div>
 
-<!-- FOOTER BLEU PLEINE LARGEUR -->
+<!-- FOOTER BLEU — PLEINE LARGEUR -->
 <footer class="footer-full">
     <div class="footer-inner">
         <div class="footer-top">
@@ -579,7 +584,7 @@ label.field-label {
     </div>
 </footer>
 
-<!-- BANDEAU BLANC PLEINE LARGEUR -->
+<!-- BANDEAU BLANC — PLEINE LARGEUR -->
 <div class="footer-white-full">
     <div class="footer-white-inner">
         <div class="footer-brand">
